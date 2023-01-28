@@ -1,0 +1,9 @@
+export const WORK_AREA_WIDTH__MAX = '1000px';
+export const SECTION_PADDINGS__X__MOBILE = '16px';
+export const SECTION_PADDINGS__X__LAPTOP = '24px';
+export const SECTION_PADDINGS__X__DESKTOP = '72px';
+export const SECTION_PADDINGS__Y_TOP = '48px';
+export const SECTION_PADDINGS__Y_TOP__DESKTOP = '64px';
+export const SECTION_PADDINGS__Y_BOTTOM = '64px';
+export const FLEX_GAP__MOBILE = '16px';
+export const FLEX_GAP = '16px';

@@ -1,0 +1,8 @@
+package.json
+*.config.js
+config-overrides.js
+Makefile
+docker-compose.yml
+.*
+README.md
+*.json
