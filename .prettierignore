@@ -1,0 +1,9 @@
+build
+coverage
+.history
+public
+node_modules
+.prettierignore
+.gitignore
+
+*.html

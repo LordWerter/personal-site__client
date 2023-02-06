@@ -1,8 +1,23 @@
-import { combineReducers, configureStore, Store } from '@reduxjs/toolkit';
-import { TState } from '../../definitions';
-import { AppReducer, ArticlesReducer, InitialAppModelState, InitialArticlesModelState } from './models';
+import {
+    combineReducers,
+    configureStore,
+    Store,
+} from '@reduxjs/toolkit';
 
-export { setAppData, AppReducer, setArticlesData, ArticlesReducer } from './models';
+import { TState } from '../../definitions';
+import {
+    AppReducer,
+    ArticlesReducer,
+    InitialAppModelState,
+    InitialArticlesModelState,
+} from './models';
+
+export {
+    AppReducer,
+    ArticlesReducer,
+    setAppData,
+    setArticlesData,
+} from './models';
 
 const createRootReducer = () =>
   combineReducers({
@@ -24,4 +39,5 @@ const createStore = (): Store<TState> => {
   return store;
 };
 
-export default createStore();
+export const store = createStore();
+export default store;

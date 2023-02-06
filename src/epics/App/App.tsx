@@ -1,10 +1,30 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, Suspense } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { TComponentProps, TState } from '../../definitions';
-import { Router, Loading } from '..';
-import { Modal, Loader, Header, MobMenu, Footer } from './features';
+import {
+    Suspense,
+    useEffect,
+} from 'react';
+
+import {
+    useDispatch,
+    useSelector,
+} from 'react-redux';
+
+import {
+    Loading,
+    Router,
+} from '../';
+import {
+    RootState,
+    TComponentProps,
+} from '../../definitions';
 import { setAppData } from '../Store';
+import {
+    Footer,
+    Header,
+    Loader,
+    Menu,
+    Modal,
+} from './features';
 
 export type TProps = TComponentProps & {};
 
@@ -23,15 +43,8 @@ export const App: React.FC<TProps> = (): JSX.Element => {
     App: {
       sizeId = 'mobile',
       // langId = 'ru'
-      visibility: {
-        modal: showModal,
-        header: showHeader,
-        loader: showLoader,
-        mobMenu: showMobMenu,
-        footer: showFooter,
-      },
     },
-  } = useSelector((state: TState) => state);
+  } = useSelector((state: RootState) => state);
 
   const dispatch = useDispatch();
   const handleResize = async () => {
@@ -54,12 +67,12 @@ export const App: React.FC<TProps> = (): JSX.Element => {
 
   return (
     <Suspense fallback={<Loading />}>
-      {showModal ? <Modal /> : <></>}
-      {showLoader ? <Loader /> : <></>}
-      {showHeader && <Header />}
-      {sizeId === 'mobile' && showMobMenu && <MobMenu />}
+      <Loader />
+      <Modal />
+      <Header />
+      <Menu />
       <Router />
-      {showFooter && <Footer />}
+      <Footer />
     </Suspense>
   );
 };

@@ -1,6 +1,24 @@
-export type { TBtnCode, TBtnDescriptor, TModalType, TModalDescriptor } from './App';
-export type { TSize, TLang, TComponentProps, THTMLElementProps } from './Component';
-export type { TState, TModelName, TModelActionPayload, TModelAction, TAppModel, TArticlesModel } from './Store';
+export type {
+    TBtnCode,
+    TBtnDescriptor,
+    TModalDescriptor,
+    TModalType,
+} from './App';
+export type {
+    TComponentProps,
+    THTMLElementProps,
+    TLang,
+    TSize,
+} from './Component';
+export type {
+    RootState,
+    TAppModel,
+    TArticlesModel,
+    TModelAction,
+    TModelActionPayload,
+    TModelName,
+    TState,
+} from './Store';
 
 export type TTextBlockType = 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6' | 'P';
 export type TLinkType = 'HTTPS__URL' | 'HTTPS__FILE';

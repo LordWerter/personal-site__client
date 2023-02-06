@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
-import { THTMLElementProps } from '../../definitions';
-import { getCSSObj } from '../../utils';
+import { THTMLElementProps } from '../../../../definitions';
+import { getCSSObj } from '../../../../utils';
 
 export type TCWrapProps = THTMLElementProps;
 
@@ -9,9 +9,9 @@ export const CWrap = styled.div<TCWrapProps>`
   ${getCSSObj}
 `;
 
-export type TContentAreaProps = THTMLElementProps;
+export type TModalWrapProps = THTMLElementProps;
 
-export const ContentArea = styled.main<TContentAreaProps>`
+export const ModalWrap = styled.main<TModalWrapProps>`
   ${getCSSObj}
 `;
 

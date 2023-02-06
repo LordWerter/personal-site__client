@@ -12,11 +12,11 @@ import lang from './lang';
 import {
     CWrap,
     ModalWrap,
-} from './Modal.styles';
+} from './ProfileCard.styles';
 
 export type TProps = TComponentProps & {};
 
-export const Modal: React.FC<TProps> = (): JSX.Element => {
+export const ProfileCard: React.FC<TProps> = (): JSX.Element => {
   const {
     App: {
       sizeId = 'mobile',
@@ -36,4 +36,4 @@ export const Modal: React.FC<TProps> = (): JSX.Element => {
   </CWrap>);
 };
 
-export default Modal;
+export default ProfileCard;

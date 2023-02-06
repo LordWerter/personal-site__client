@@ -12,11 +12,11 @@ import lang from './lang';
 import {
     CWrap,
     ModalWrap,
-} from './Modal.styles';
+} from './MenuItem.styles';
 
 export type TProps = TComponentProps & {};
 
-export const Modal: React.FC<TProps> = (): JSX.Element => {
+export const MenuItem: React.FC<TProps> = (): JSX.Element => {
   const {
     App: {
       sizeId = 'mobile',
@@ -25,7 +25,7 @@ export const Modal: React.FC<TProps> = (): JSX.Element => {
   } = useSelector((state: RootState) => state);
 
   // @ts-ignore
-  const theme = { ...useTheme().Modal };
+  const theme = { ...useTheme().MenuItem };
   const langs = lang[langId];
 
 
@@ -36,4 +36,4 @@ export const Modal: React.FC<TProps> = (): JSX.Element => {
   </CWrap>);
 };
 
-export default Modal;
+export default MenuItem;

@@ -9,14 +9,10 @@ import {
     TComponentProps,
 } from '../../../../definitions';
 import lang from './lang';
-import {
-    CWrap,
-    ModalWrap,
-} from './Modal.styles';
 
 export type TProps = TComponentProps & {};
 
-export const Modal: React.FC<TProps> = (): JSX.Element => {
+export const Menu: React.FC<TProps> = (): JSX.Element => {
   const {
     App: {
       sizeId = 'mobile',
@@ -25,15 +21,11 @@ export const Modal: React.FC<TProps> = (): JSX.Element => {
   } = useSelector((state: RootState) => state);
 
   // @ts-ignore
-  const theme = { ...useTheme().Modal };
+  const theme = { ...useTheme().Menu };
   const langs = lang[langId];
 
 
-  return (<CWrap sizeId={sizeId} theme={theme.cwrap}>
-    <ModalWrap sizeId={sizeId} theme={theme.modalwrap}>
-
-    </ModalWrap>
-  </CWrap>);
+  return <></>;
 };
 
-export default Modal;
+export default Menu;

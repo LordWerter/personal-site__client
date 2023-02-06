@@ -1,19 +1,26 @@
 /* eslint-disable @typescript-eslint/default-param-last */
 import { Reducer } from 'redux';
-import { TAppModel, TModelAction } from '../../../../definitions';
+
+import {
+    TAppModel,
+    TModelAction,
+} from '../../../../definitions';
 import { SET_APP_DATA } from './actions';
 
 export const initialState: TAppModel = {
   sizeId: 'mobile',
   langId: 'ru',
-  visibility: {
-    header: true,
-    footer: true,
-    mobMenu: false,
-    loader: false,
-    modal: false,
-  },
+  showHeader: true,
+  showFooter: true,
+  showMenu: false,
+  showLoader: false,
+
+  showModal: false,
   modalDescriptor: null,
+
+  showToast: false,
+  toastDescriptor: null,
+
   limitAccess: false,
 };
 

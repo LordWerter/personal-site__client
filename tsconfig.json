@@ -1,9 +1,12 @@
 {
-    "extends": "../../tsconfig.base.json",
     "compilerOptions": {
-        "baseUrl": ".",
+        "baseUrl": "<rootDir>",
         "target": "es5",
-        "lib": ["dom", "dom.iterable", "esnext"],
+        "lib": [
+            "dom",
+            "dom.iterable",
+            "esnext"
+        ],
         "allowJs": true,
         "skipLibCheck": true,
         "esModuleInterop": true,
@@ -19,9 +22,7 @@
         "jsx": "react-jsx"
     },
     "include": [
-        "packages/**/*.ts",
-        "packages/**/*.tsx",
-        "packages/**/*.d.ts"
+        "src"
     ],
     "exclude": [
         "node_modules",

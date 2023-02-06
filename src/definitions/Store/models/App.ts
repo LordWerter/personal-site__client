@@ -1,19 +1,24 @@
-import { TLang, TSize, TModalDescriptor } from '../..';
+import {
+    TLang,
+    TModalDescriptor,
+    TSize,
+} from '../../';
 
 export type TAppModel = {
   langId: TLang;
   sizeId: TSize;
 
-  visibility: {
-    header: boolean;
-    footer: boolean;
+  showHeader: boolean;
+  showMenu: boolean;
+  showFooter: boolean;
 
-    mobMenu: boolean;
+  showLoader: boolean;
 
-    loader: boolean;
-
-    modal: boolean;
-  };
+  showModal: boolean;
   modalDescriptor: TModalDescriptor | null;
+
+  showToast: boolean;
+  toastDescriptor: TModalDescriptor | null;
+
   limitAccess: boolean;
 };
