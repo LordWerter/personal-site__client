@@ -5,19 +5,16 @@ import {
 } from 'react';
 
 import {
-    useDispatch,
-    useSelector,
-} from 'react-redux';
+    RootState,
+    TComponentProps,
+} from 'definitions';
+import { setAppData } from 'epics';
+import { useSelector } from 'react-redux';
 
 import {
     Loading,
     Router,
 } from '../';
-import {
-    RootState,
-    TComponentProps,
-} from '../../definitions';
-import { setAppData } from '../Store';
 import {
     Footer,
     Header,
@@ -46,14 +43,11 @@ export const App: React.FC<TProps> = (): JSX.Element => {
     },
   } = useSelector((state: RootState) => state);
 
-  const dispatch = useDispatch();
   const handleResize = async () => {
-    const curSizeId = getCurSizeId();
-    dispatch(
+      const curSizeId = getCurSizeId();
       setAppData({
         sizeId: curSizeId,
-      }),
-    );
+      });
   };
 
   useEffect(() => {
@@ -66,14 +60,14 @@ export const App: React.FC<TProps> = (): JSX.Element => {
   }, []);
 
   return (
-    <Suspense fallback={<Loading />}>
-      <Loader />
-      <Modal />
-      <Header />
-      <Menu />
-      <Router />
-      <Footer />
-    </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Loader />
+        <Modal />
+        <Header />
+        <Menu />
+        <Router />
+        <Footer />
+      </Suspense>
   );
 };
 

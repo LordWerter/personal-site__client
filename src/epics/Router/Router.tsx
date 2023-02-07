@@ -1,32 +1,19 @@
+import type { TComponentProps } from 'definitions';
+import { Home } from 'epics';
 import {
-  lazy,
-  Suspense,
-} from 'react';
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
+  createBrowserRouter,
+  RouterProvider,
 } from 'react-router-dom';
-
-import type { TComponentProps } from '../../definitions';
 
 export type TProps = TComponentProps & {};
 
-const Text = lazy(() => <div>Text</div>);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+]);
 
-export const Router: React.FC<TProps> = (): JSX.Element => {
-  return (
-    <Router>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Switch>
-          <Route exact component={} path="/" />
-          <Route component={SelectCity} path="/select-city" />
-          <Route component={CityPage} path="/:city" />
-        </Switch>
-      </Suspense>
-    </Router>
-  );
-};
+export const Router: React.FC = (): JSX.Element => (<RouterProvider router={router} />);
 
 export default Router;

@@ -1,6 +1,6 @@
 import { Action } from 'redux';
 
-export type TModelName = 'APP' | 'ARTICLES';
+export type TModelName = 'App' | 'Articles' | 'Comments';
 
 export type TModelActionPayload<TModelState> = Partial<TModelState>;
 

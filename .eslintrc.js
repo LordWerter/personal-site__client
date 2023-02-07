@@ -1,4 +1,8 @@
+import markdown from 'eslint-plugin-markdown';
+
 module.exports = {
+    files: ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"],
+    ignorePatterns: ["src/**/*.test.ts", "src/**/*.test.tsx"],
     extends: [
         'react-app',
         'react-app/jest',
@@ -33,6 +37,18 @@ module.exports = {
         'import/extensions': ['off'],
         'import/no-extraneous-dependencies': ['off'],
     },
+    overrides: [
+        {
+            files: ["**/*.md"],
+            plugins: {
+                markdown
+            },
+            processor: "markdown/markdown",
+            settings: {
+                sharedData: "Hello"
+            }
+        }
+    ],
     settings: {
         react: {
             version: '999.999.999',

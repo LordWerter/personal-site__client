@@ -1,5 +1,22 @@
-export { setAppData } from './app/actions';
-export { initialState as InitialAppModelState, default as AppReducer } from './app/reducer';
+import { combineReducers } from '@reduxjs/toolkit';
 
-export { setArticlesData } from './articles/actions';
-export { initialState as InitialArticlesModelState, default as ArticlesReducer } from './articles/reducer';
+import {
+    appReducer,
+    setAppData,
+} from './App';
+import {
+    articlesReducer,
+    setArticlesData,
+} from './Articles';
+import {
+    commentsReducer,
+    setCommentsData,
+} from './Comments';
+
+export const rootReducer = combineReducers({
+    App: appReducer,
+    Articles: articlesReducer,
+    Comments: commentsReducer,
+});
+
+export { setAppData, setArticlesData, setCommentsData };

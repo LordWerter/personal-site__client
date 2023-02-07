@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useSelector } from 'react-redux';
 
 import { useTheme } from '@emotion/react';
@@ -8,7 +6,10 @@ import {
     RootState,
     TComponentProps,
 } from '../../../../definitions';
-import { CWrap } from './Footer.styles';
+import {
+    Column,
+    CWrap,
+} from './Footer.styles';
 import lang from './lang';
 
 export type TProps = TComponentProps & {};
@@ -27,7 +28,9 @@ export const Footer: React.FC<TProps> = (): JSX.Element => {
 
 
   return (<CWrap sizeId={sizeId} theme={theme.cwrap}>
-    
+    <Column sizeId={sizeId} theme={theme.column}>Column #1</Column>
+    <Column sizeId={sizeId} theme={theme.column}>Column #2</Column>
+    <Column sizeId={sizeId} theme={theme.column}>Column #3</Column>
   </CWrap>);
 };
 

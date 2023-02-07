@@ -1,4 +1,4 @@
-import DefaultComponent from './Home';
+import Home from './Home';
 
-export { Home } from './Home';
-export default DefaultComponent;
+export { Home };
+export default Home;

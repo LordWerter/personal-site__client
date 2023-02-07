@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { useSelector } from 'react-redux';
 
 import { useTheme } from '@emotion/react';
@@ -8,15 +6,12 @@ import {
     RootState,
     TComponentProps,
 } from '../../../../definitions';
-import lang from './lang';
-import {
-    CWrap,
-    ModalWrap,
-} from './MenuItem.styles';
+import { CWrap } from './MenuItem.styles';
 
 export type TProps = TComponentProps & {};
 
-export const MenuItem: React.FC<TProps> = (): JSX.Element => {
+export const MenuItem: React.FC<TProps> = (props): JSX.Element => {
+  const { children } = props;
   const {
     App: {
       sizeId = 'mobile',
@@ -26,13 +21,10 @@ export const MenuItem: React.FC<TProps> = (): JSX.Element => {
 
   // @ts-ignore
   const theme = { ...useTheme().MenuItem };
-  const langs = lang[langId];
 
 
   return (<CWrap sizeId={sizeId} theme={theme.cwrap}>
-    <ModalWrap sizeId={sizeId} theme={theme.modalwrap}>
-
-    </ModalWrap>
+    {children}
   </CWrap>);
 };
 

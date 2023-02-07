@@ -1,38 +1,15 @@
-import {
-    combineReducers,
-    configureStore,
-    Store,
-} from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 
-import { TState } from '../../definitions';
 import {
-    AppReducer,
-    ArticlesReducer,
-    InitialAppModelState,
-    InitialArticlesModelState,
+    rootReducer,
+    setAppData as setAppDataAction,
+    setArticlesData as setArticlesDataAction,
+    setCommentsData as setCommentsDataAction,
 } from './models';
 
-export {
-    AppReducer,
-    ArticlesReducer,
-    setAppData,
-    setArticlesData,
-} from './models';
-
-const createRootReducer = () =>
-  combineReducers({
-    App: AppReducer,
-    Articles: ArticlesReducer,
-  });
-
-const createStore = (): Store<TState> => {
-  const rootReducer = createRootReducer();
+const createStore = () => {
   const store = configureStore({
     reducer: rootReducer,
-    preloadedState: {
-      App: { ...InitialAppModelState },
-      Articles: { ...InitialArticlesModelState },
-    },
     devTools: true,
   });
 
@@ -40,4 +17,9 @@ const createStore = (): Store<TState> => {
 };
 
 export const store = createStore();
+const dispatch = store.dispatch;
+export const setAppData = (payload: any) => dispatch(setAppDataAction(payload));
+export const setArticlesData = (payload: any) => dispatch(setArticlesDataAction(payload));
+export const setCommentsData = (payload: any) => dispatch(setCommentsDataAction(payload));
+
 export default store;

@@ -1,4 +1,4 @@
-import DefaultComponent from './Design';
+import Design from './Design';
 
-export { Design } from './Design';
-export default DefaultComponent;
+export { Design };
+export default Design;

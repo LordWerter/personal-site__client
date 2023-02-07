@@ -6,3 +6,5 @@ export { Design } from './Design';
 export { Home } from './Home';
 export { Router } from './Router';
 export { Loading } from './Loading';
+export { setAppData, setArticlesData, setCommentsData, store } from './Store';
+export { CoreProvider } from './CoreProvider';

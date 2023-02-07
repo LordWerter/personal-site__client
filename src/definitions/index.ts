@@ -6,6 +6,7 @@ export type {
 } from './App';
 export type {
     TComponentProps,
+    TElementTheme,
     THTMLElementProps,
     TLang,
     TSize,
@@ -14,10 +15,10 @@ export type {
     RootState,
     TAppModel,
     TArticlesModel,
+    TCommentsModel,
     TModelAction,
     TModelActionPayload,
     TModelName,
-    TState,
 } from './Store';
 
 export type TTextBlockType = 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6' | 'P';

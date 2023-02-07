@@ -1,15 +1,30 @@
-import React, { Suspense } from 'react';
+import {
+    RootState,
+    TComponentProps,
+} from 'definitions';
+import { useSelector } from 'react-redux';
 
-import type { TComponentProps } from '../../definitions';
+import { useTheme } from '@emotion/react';
+
+import { CWrap } from './Article.styles';
 
 export type TProps = TComponentProps & {};
 
 export const Article: React.FC<TProps> = (): JSX.Element => {
-  const Splash: React.FC<TProps> = (): JSX.Element => {
-    return <div>Loading</div>;
-  };
+  const {
+    App: {
+      sizeId = 'mobile',
+      langId = 'ru'
+    },
+  } = useSelector((state: RootState) => state);
 
-  return <Suspense fallback={<Splash />}>Hello!</Suspense>;
+  // @ts-ignore
+  const theme = { ...useTheme().Article };
+
+
+  return (<CWrap sizeId={sizeId} theme={theme.cwrap}>
+    Articles
+  </CWrap>);
 };
 
 export default Article;

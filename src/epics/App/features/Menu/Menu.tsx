@@ -1,14 +1,13 @@
-import React from 'react';
-
 import { useSelector } from 'react-redux';
 
 import { useTheme } from '@emotion/react';
 
+import { MenuItem } from '../';
 import {
     RootState,
     TComponentProps,
 } from '../../../../definitions';
-import lang from './lang';
+import { CWrap } from './Menu.styles';
 
 export type TProps = TComponentProps & {};
 
@@ -22,10 +21,11 @@ export const Menu: React.FC<TProps> = (): JSX.Element => {
 
   // @ts-ignore
   const theme = { ...useTheme().Menu };
-  const langs = lang[langId];
 
 
-  return <></>;
+  return (<CWrap sizeId={sizeId} theme={theme.cwrap}>
+    <MenuItem sizeId={sizeId} langId={langId} />
+  </CWrap>);
 };
 
 export default Menu;

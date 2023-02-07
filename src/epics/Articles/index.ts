@@ -1,4 +1,4 @@
-import DefaultComponent from './Articles';
+import Articles from './Articles';
 
-export { Articles } from './Articles';
-export default DefaultComponent;
+export { Articles };
+export default Articles;

@@ -17,3 +17,18 @@ export type THTMLElementProps = {
   sizeId: TSize;
   theme: any;
 };
+
+export type TElementTheme = {
+  core: {
+    [key: string]: any;
+  }
+  mobile: {
+    [key: string]: any;
+  }
+  laptop: {
+    [key: string]: any;
+  }
+  desktop: {
+    [key: string]: any;
+  }
+};
