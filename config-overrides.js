@@ -1,5 +1,5 @@
-export default function override(config, env) {
+module.exports = function override(config, env) {
     console.warn(config);
 
     return config;
-}
+};

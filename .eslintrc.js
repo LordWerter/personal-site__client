@@ -1,5 +1,5 @@
 module.exports = {
-    include: ['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.js', 'src/**/*.jsx'],
+    // include: ['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.js', 'src/**/*.jsx'],
     ignorePatterns: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
     extends: [
         'react-app',
@@ -35,18 +35,6 @@ module.exports = {
         'import/extensions': ['off'],
         'import/no-extraneous-dependencies': ['off'],
     },
-    overrides: [
-        {
-            files: ['**/*.md'],
-            plugins: {
-                markdown,
-            },
-            processor: 'markdown/markdown',
-            settings: {
-                sharedData: 'Hello',
-            },
-        },
-    ],
     settings: {
         react: {
             version: '999.999.999',
