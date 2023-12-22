@@ -1,8 +1,6 @@
-import markdown from 'eslint-plugin-markdown';
-
 module.exports = {
-    files: ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"],
-    ignorePatterns: ["src/**/*.test.ts", "src/**/*.test.tsx"],
+    include: ['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.js', 'src/**/*.jsx'],
+    ignorePatterns: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
     extends: [
         'react-app',
         'react-app/jest',
@@ -32,22 +30,22 @@ module.exports = {
     },
     rules: {
         'linebreak-style': 'off',
-        'jsx-quotes': ["error", "prefer-single"],
+        'jsx-quotes': ['error', 'prefer-single'],
         'prettier/prettier': 'off',
         'import/extensions': ['off'],
         'import/no-extraneous-dependencies': ['off'],
     },
     overrides: [
         {
-            files: ["**/*.md"],
+            files: ['**/*.md'],
             plugins: {
-                markdown
+                markdown,
             },
-            processor: "markdown/markdown",
+            processor: 'markdown/markdown',
             settings: {
-                sharedData: "Hello"
-            }
-        }
+                sharedData: 'Hello',
+            },
+        },
     ],
     settings: {
         react: {
@@ -59,7 +57,7 @@ module.exports = {
             },
         },
         'import/parsers': {
-            '@typescript-eslint/parser': ['.ts', '.tsx']
-        }
+            '@typescript-eslint/parser': ['.ts', '.tsx'],
+        },
     },
-}
+};

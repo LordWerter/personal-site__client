@@ -20,5 +20,4 @@ module.exports = {
     useTabs: false,
 
     arrowParens: 'always',
-    
 };
