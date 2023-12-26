@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "baseUrl": "./src",
+        "baseUrl": ".",
         "target": "esnext",
         "lib": [
             "dom",
@@ -19,15 +19,13 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "noEmit": true,
-        "jsx": "react-jsx",
-        "typeRoots": ["./src"],
+        "jsx": "react-jsx"
     },
     "include": [
         "src"
     ],
     "exclude": [
         "node_modules",
-        "**/node_modules/**",
         "*.json",
         "*.js"
     ]

@@ -4,7 +4,7 @@ import { TComponentProps } from '../../definitions';
 export type TProps = TComponentProps & {};
 
 export const MiniCard: React.FC<TProps> = (): JSX.Element => {
-  return <></>;
+    return <></>;
 };
 
 export default MiniCard;

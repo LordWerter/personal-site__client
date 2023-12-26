@@ -5,30 +5,30 @@ export type TSize = 'mobile' | 'laptop' | 'desktop';
 export type TLang = 'ru' | 'en';
 
 export type TComponentProps = {
-  sizeId?: TSize;
-  langId?: TLang;
-  customize?: {
-    [key: string]: unknown;
-  };
-  children?: ReactNode;
+    sizeId?: TSize;
+    langId?: TLang;
+    customize?: {
+        [key: string]: unknown;
+    };
+    children?: ReactNode;
 };
 
 export type THTMLElementProps = {
-  sizeId: TSize;
-  theme: any;
+    sizeId: TSize;
+    theme: any;
 };
 
 export type TElementTheme = {
-  core: {
-    [key: string]: any;
-  }
-  mobile: {
-    [key: string]: any;
-  }
-  laptop: {
-    [key: string]: any;
-  }
-  desktop: {
-    [key: string]: any;
-  }
+    core: {
+        [key: string]: any;
+    };
+    mobile: {
+        [key: string]: any;
+    };
+    laptop: {
+        [key: string]: any;
+    };
+    desktop: {
+        [key: string]: any;
+    };
 };

@@ -8,18 +8,20 @@ import {
 } from './models';
 
 const createStore = () => {
-  const store = configureStore({
-    reducer: rootReducer,
-    devTools: true,
-  });
+    const store = configureStore({
+        reducer: rootReducer,
+        devTools: true,
+    });
 
-  return store;
+    return store;
 };
 
 export const store = createStore();
 const dispatch = store.dispatch;
 export const setAppData = (payload: any) => dispatch(setAppDataAction(payload));
-export const setArticlesData = (payload: any) => dispatch(setArticlesDataAction(payload));
-export const setCommentsData = (payload: any) => dispatch(setCommentsDataAction(payload));
+export const setArticlesData = (payload: any) =>
+    dispatch(setArticlesDataAction(payload));
+export const setCommentsData = (payload: any) =>
+    dispatch(setCommentsDataAction(payload));
 
 export default store;

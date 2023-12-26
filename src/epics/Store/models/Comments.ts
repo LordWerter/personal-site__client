@@ -3,35 +3,35 @@ import { TCommentsModel } from 'definitions';
 import { createSlice } from '@reduxjs/toolkit';
 
 export const initialState: TCommentsModel = {
-  sizeId: 'mobile',
-  langId: 'ru',
-  showHeader: true,
-  showFooter: true,
-  showMenu: false,
-  showLoader: false,
+    sizeId: 'mobile',
+    langId: 'ru',
+    showHeader: true,
+    showFooter: true,
+    showMenu: false,
+    showLoader: false,
 
-  showModal: false,
-  modalDescriptor: null,
+    showModal: false,
+    modalDescriptor: null,
 
-  showToast: false,
-  toastDescriptor: null,
+    showToast: false,
+    toastDescriptor: null,
 
-  limitAccess: false,
+    limitAccess: false,
 };
 
 export const commentsSlice = createSlice({
-  name: 'Comments',
-  initialState,
-  reducers: {
-    setCommentsData: (state, action) => {
-      const newState = {
-        ...state,
-        ...action.payload,
-      };
+    name: 'Comments',
+    initialState,
+    reducers: {
+        setCommentsData: (state, action) => {
+            const newState = {
+                ...state,
+                ...action.payload,
+            };
 
-      return newState;
+            return newState;
+        },
     },
-  },
 });
 
 export const { setCommentsData } = commentsSlice.actions;

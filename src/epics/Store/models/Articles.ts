@@ -3,22 +3,22 @@ import { TArticlesModel } from 'definitions';
 import { createSlice } from '@reduxjs/toolkit';
 
 export const initialState: TArticlesModel = {
-  items: null,
+    items: null,
 };
 
 export const articlesSlice = createSlice({
-  name: 'Articles',
-  initialState,
-  reducers: {
-    setArticlesData: (state, action) => {
-      const newState = {
-        ...state,
-        ...action.payload,
-      };
+    name: 'Articles',
+    initialState,
+    reducers: {
+        setArticlesData: (state, action) => {
+            const newState = {
+                ...state,
+                ...action.payload,
+            };
 
-      return newState;
+            return newState;
+        },
     },
-  },
 });
 
 export const { setArticlesData } = articlesSlice.actions;

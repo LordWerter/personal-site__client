@@ -4,38 +4,38 @@ import { THTMLElementProps } from '../../definitions';
 
 export type TCWrapProps = THTMLElementProps;
 export const CWrap = styled.div<TCWrapProps>`
-  ${getCSSObj}
+    ${getCSSObj}
 `;
 
 export type TTrackProps = THTMLElementProps;
 export const Track = styled.div<TTrackProps>`
-  ${getCSSObj}
+    ${getCSSObj}
 `;
 
 export type TSliderWrapProps = THTMLElementProps;
 export const SliderWrap = styled.div<TSliderWrapProps>`
-  ${getCSSObj}
+    ${getCSSObj}
 `;
 
 export type TSlideProps = THTMLElementProps;
 export const Slide = styled.div<TSlideProps>`
-  ${getCSSObj}
+    ${getCSSObj}
 `;
 
 export type TArrowsWrapProps = THTMLElementProps;
 export const ArrowsWrap = styled.div<TArrowsWrapProps>`
-  ${getCSSObj}
+    ${getCSSObj}
 `;
 
 export type TArrowProps = THTMLElementProps;
 export const Arrow = styled.div<TArrowProps>`
-  ${getCSSObj}
+    ${getCSSObj}
 `;
 
 export type TLineProps = THTMLElementProps;
 export const LeftLine = styled.div<TLineProps>`
-  ${getCSSObj}
+    ${getCSSObj}
 `;
 export const RightLine = styled.div<TLineProps>`
-  ${getCSSObj}
+    ${getCSSObj}
 `;

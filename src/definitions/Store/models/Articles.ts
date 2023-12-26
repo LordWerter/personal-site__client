@@ -1,3 +1,3 @@
 export type TArticlesModel = {
-  items: unknown[] | null;
+    items: unknown[] | null;
 };

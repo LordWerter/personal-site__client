@@ -1,2 +1,1 @@
-export type TCommentsModel = {
-};
+export type TCommentsModel = {};

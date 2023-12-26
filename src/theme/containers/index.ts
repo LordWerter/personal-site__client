@@ -4,8 +4,8 @@ import Home from './Home';
 import Loader from './Loader';
 
 export default {
-  Footer,
-  Header,
-  Home,
-  Loader,
+    Footer,
+    Header,
+    Home,
+    Loader,
 };
