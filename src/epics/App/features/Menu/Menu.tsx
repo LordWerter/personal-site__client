@@ -3,14 +3,14 @@ import { useSelector } from 'react-redux';
 import { useTheme } from '@emotion/react';
 
 import { MenuItem } from '../';
-import { RootState, TComponentProps } from '../../../../definitions';
+import { RootState, ComponentProps } from 'types';
 import { CWrap } from './Menu.styles';
 
-export type TProps = TComponentProps & {};
+export interface Props extends ComponentProps {}
 
-export const Menu: React.FC<TProps> = (): JSX.Element => {
+export const Menu: React.FC<Props> = (): JSX.Element => {
     const {
-        App: { sizeId = 'mobile', langId = 'ru' },
+        App: { sizeId = 'MOBILE', langId },
     } = useSelector((state: RootState) => state);
 
     // @ts-ignore

@@ -1,5 +1,4 @@
-import { CONTROLS__BURGER_MENU } from '../../images';
-import { TElementTheme } from 'definitions';
+import { DomNodeTheme } from 'types';
 
 /*
 import {} from '../../../../images';
@@ -8,13 +7,10 @@ import mixins from '../../mixins';
 import { core as Typography } from '../../typography';
 */
 
-export const blocks: TElementTheme = {
+export const blocks: DomNodeTheme = {
     core: {
-        width: '38px',
-        height: '38px',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundImage: `url('${CONTROLS__BURGER_MENU}')`,
+        width: '42px',
+        height: '42px',
     },
     mobile: {},
     laptop: {},

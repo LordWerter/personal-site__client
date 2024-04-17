@@ -1,8 +1,10 @@
-import { TArticlesModel } from 'definitions';
+import { Article } from 'types';
 
 import { createSlice } from '@reduxjs/toolkit';
 
-export const initialState: TArticlesModel = {
+export const initialState: {
+    items: Article[] | null,
+} = {
     items: null,
 };
 

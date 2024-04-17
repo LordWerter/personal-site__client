@@ -1,5 +1,5 @@
-import { CONTROLS__CROSS } from '../../images';
-import { TElementTheme } from 'definitions';
+// import { CONTROLS__CROSS } from '../../images';
+import { DomNodeTheme } from 'types';
 
 /*
 import {} from '../../../../images';
@@ -8,12 +8,12 @@ import mixins from '../../mixins';
 import { core as Typography } from '../../typography';
 */
 
-export const blocks: TElementTheme = {
+export const blocks: DomNodeTheme = {
     core: {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',
-        backgroundImage: `url('${CONTROLS__CROSS}')`,
+        // backgroundImage: `url('${CONTROLS__CROSS}')`,
         top: '40px',
         right: '16px',
         width: '42px',

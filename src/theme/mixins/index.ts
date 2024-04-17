@@ -10,7 +10,6 @@ import {
     SECTION_PADDINGS__X__LAPTOP,
     SECTION_PADDINGS__X__MOBILE,
 } from '../constants';
-import { STICKS__X5ID } from '../images/sticks/index';
 
 export const BG_IMG = {
     backgroundSize: 'contain',
@@ -81,19 +80,6 @@ export const BTN__DISABLED = {
     border: 'none',
     color: '#fff',
     fontSize: '16px',
-};
-
-export const BTN__X5ID_STICK = {
-    position: 'absolute',
-    top: '-22px',
-    right: '16px',
-    width: '54px',
-    height: '28px',
-    transform: 'rotate(-30deg)',
-    backgroundPosition: 'center',
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-    backgroundImage: `url('${STICKS__X5ID}')`,
 };
 
 export const BTN__FULL_WIDTH_LIMITER = {

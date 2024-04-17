@@ -1,13 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-new */
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { useState, useEffect } from 'react';
 import NativeSlider from '@fast-js/native-slider';
 import { useTheme } from '@emotion/react';
-import { TComponentProps } from '../../definitions';
-import { MiniCard } from '..';
+import { ComponentProps } from 'types';
+import { MiniCard } from 'features';
 import {
     CWrap,
     SliderWrap,
@@ -19,18 +14,18 @@ import {
     RightLine,
 } from './Carousel.styles';
 
-export type TProps = TComponentProps & {
+export interface Props extends ComponentProps {
     params: {
         id: string;
     };
-};
+}
 
-export const Carousel: React.FC<TProps> = (props): JSX.Element => {
+export const Carousel: React.FC<Props> = (): JSX.Element => {
     const [showLeftShadow, setShowLeftShadow] = useState(false);
     const [showRightShadow, setShowRightShadow] = useState(true);
 
     const id = 'PROJECT';
-    const sizeId = 'desktop';
+    const sizeId = 'DESKTOP';
     const sequense: any[] = [];
 
     // @ts-ignore
@@ -67,13 +62,14 @@ export const Carousel: React.FC<TProps> = (props): JSX.Element => {
     }, []);
 
     return (
-        <CWrap id={ids.wrapper} sizeId={sizeId} theme={theme.cwrap}>
+        <CWrap id={ids.wrapper} sizeId={sizeId} theme={theme.cwrap} data-testid={''}>
             <LeftLine
                 sizeId={sizeId}
                 theme={theme.leftline}
                 style={{
                     display: showLeftShadow ? 'block' : 'none',
                 }}
+                data-testid={''}
             />
             <RightLine
                 sizeId={sizeId}
@@ -81,22 +77,27 @@ export const Carousel: React.FC<TProps> = (props): JSX.Element => {
                 style={{
                     display: showRightShadow ? 'block' : 'none',
                 }}
+                data-testid={''}
             />
-            <SliderWrap sizeId={sizeId} theme={theme.sliderwrap}>
+            <SliderWrap
+                sizeId={sizeId}
+                theme={theme.sliderwrap}
+                data-testid={''}>
                 <Track id={ids.track} sizeId={sizeId} theme={theme.track}>
-                    {sequense.map((params: any, index: number) => {
+                    {sequense.map((_params: any, index: number) => {
                         return (
                             <Slide
                                 key={index}
                                 sizeId={sizeId}
-                                theme={theme.slide}>
+                                theme={theme.slide}
+                                data-testid={''}>
                                 <MiniCard />
                             </Slide>
                         );
                     })}
                 </Track>
             </SliderWrap>
-            <ArrowsWrap sizeId={sizeId} theme={theme.arrowswrap}>
+            <ArrowsWrap sizeId={sizeId} theme={theme.arrowswrap} data-testid={''}>
                 <Arrow
                     id={ids.leftArrow}
                     sizeId={sizeId}
@@ -104,6 +105,7 @@ export const Carousel: React.FC<TProps> = (props): JSX.Element => {
                     style={{
                         opacity: showLeftShadow ? '1' : '0.5',
                     }}
+                    data-testid={''}
                 />
                 <Arrow
                     id={ids.rightArrow}
@@ -112,6 +114,7 @@ export const Carousel: React.FC<TProps> = (props): JSX.Element => {
                     style={{
                         opacity: showRightShadow ? '1' : '0.5',
                     }}
+                    data-testid={''}
                 />
             </ArrowsWrap>
         </CWrap>

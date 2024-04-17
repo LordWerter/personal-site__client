@@ -1,14 +1,6 @@
 module.exports = {
     // include: ['src/**/*.ts', 'src/**/*.tsx', 'src/**/*.js', 'src/**/*.jsx'],
     ignorePatterns: ['src/**/*.test.ts', 'src/**/*.test.tsx'],
-    extends: [
-        'react-app',
-        'react-app/jest',
-        'airbnb',
-        'airbnb-typescript',
-        'airbnb/react',
-        'airbnb/hooks',
-    ],
     plugins: ['react', '@typescript-eslint', 'prettier', 'import', 'jest'],
     env: {
         browser: true,

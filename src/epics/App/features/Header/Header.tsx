@@ -2,14 +2,14 @@ import { useSelector } from 'react-redux';
 
 import { useTheme } from '@emotion/react';
 
-import { RootState, TComponentProps } from '../../../../definitions';
+import { RootState, ComponentProps } from 'types';
 import { CWrap } from './Header.styles';
 
-export type TProps = TComponentProps & {};
+export interface Props extends ComponentProps {}
 
-export const Header: React.FC<TProps> = (): JSX.Element => {
+export const Header: React.FC<Props> = (): JSX.Element => {
     const {
-        App: { sizeId = 'mobile', langId = 'ru' },
+        App: { sizeId = 'MOBILE' },
     } = useSelector((state: RootState) => state);
 
     // @ts-ignore

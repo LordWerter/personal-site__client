@@ -2,7 +2,7 @@ import 'react-app-polyfill/stable';
 
 import { StrictMode } from 'react';
 
-import { CoreProvider } from 'src/epics';
+import { CoreProvider } from 'epics';
 import { createRoot } from 'react-dom/client';
 
 import reportWebVitals from './reportWebVitals';

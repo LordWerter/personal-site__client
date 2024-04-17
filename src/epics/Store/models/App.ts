@@ -1,10 +1,10 @@
-import { TAppModel } from 'definitions';
+import { App } from 'types';
 
 import { createSlice } from '@reduxjs/toolkit';
 
-export const initialState: TAppModel = {
-    sizeId: 'mobile',
-    langId: 'ru',
+export const initialState: App = {
+    sizeId: 'MOBILE',
+    langId: 'RU',
     showHeader: true,
     showFooter: true,
     showMenu: false,

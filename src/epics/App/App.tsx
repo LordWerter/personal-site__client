@@ -1,14 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { Suspense, useEffect } from 'react';
 
-import { RootState, TComponentProps } from 'definitions';
-import { setAppData } from 'epics';
-import { useSelector } from 'react-redux';
-
-import { Loading, Router } from '../';
+import { ComponentProps } from 'types';
+import { setAppData, Loading, Router } from 'epics';
 import { Footer, Header, Loader, Menu, Modal } from './features';
 
-export type TProps = TComponentProps & {};
+export interface Props extends ComponentProps {};
 
 const getCurSizeId = () => {
     if (window.innerWidth >= 1200) {
@@ -17,16 +13,10 @@ const getCurSizeId = () => {
     if (window.innerWidth >= 720) {
         return 'laptop';
     }
-
     return 'mobile';
 };
-export const App: React.FC<TProps> = (): JSX.Element => {
-    const {
-        App: {
-            sizeId = 'mobile',
-            // langId = 'ru'
-        },
-    } = useSelector((state: RootState) => state);
+
+export const App: React.FC<Props> = (): JSX.Element => {
 
     const handleResize = async () => {
         const curSizeId = getCurSizeId();

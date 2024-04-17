@@ -1,4 +1,4 @@
-import { TElementTheme } from 'definitions';
+import { DomNodeTheme } from 'types';
 
 import { SECTION_PADDINGS__Y_TOP } from 'theme/constants';
 import { SECTION_PAD_X_MOBILE } from 'theme/mixins';
@@ -10,7 +10,7 @@ import mixins from '../../mixins';
 import { core as Typography } from '../../typography';
 */
 
-export const blocks: TElementTheme = {
+export const blocks: DomNodeTheme = {
     core: {
         display: 'flex',
         flexDirection: 'column',

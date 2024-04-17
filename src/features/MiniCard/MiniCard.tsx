@@ -1,9 +1,9 @@
 import React from 'react';
-import { TComponentProps } from '../../definitions';
+import { ComponentProps } from 'types';
 
-export type TProps = TComponentProps & {};
+export interface Props extends ComponentProps {}
 
-export const MiniCard: React.FC<TProps> = (): JSX.Element => {
+export const MiniCard: React.FC<Props> = (): JSX.Element => {
     return <></>;
 };
 

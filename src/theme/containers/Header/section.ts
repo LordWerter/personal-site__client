@@ -1,4 +1,4 @@
-import { TElementTheme } from 'definitions';
+import { DomNodeTheme } from 'types';
 
 /*
 import {} from '../../../../images';
@@ -7,7 +7,7 @@ import mixins from '../../mixins';
 import { core as Typography } from '../../typography';
 */
 
-export const blocks: TElementTheme = {
+export const blocks: DomNodeTheme = {
     core: {
         width: '100%',
         maxWidth: '1000px',

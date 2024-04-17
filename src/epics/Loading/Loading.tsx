@@ -2,8 +2,8 @@ import { useSelector } from 'react-redux';
 
 import { useTheme } from '@emotion/react';
 
-import { RootState, TComponentProps } from '../../definitions';
-import lang from './lang';
+import { RootState, ComponentProps } from 'types';
+import lang, { TLangMap } from './lang';
 import {
     ContentArea,
     CWrap,
@@ -13,16 +13,16 @@ import {
     Title,
 } from './Loading.styles';
 
-export type TProps = TComponentProps & {};
+export interface Props extends ComponentProps {}
 
-export const Loading: React.FC<TProps> = (): JSX.Element => {
+export const Loading: React.FC<Props> = (): JSX.Element => {
     const {
         App: { sizeId, langId },
     } = useSelector((state: RootState) => state);
 
     // @ts-ignore
     const theme = { ...useTheme().Loading };
-    const langs: any = lang[langId];
+    const langs: any = (lang as TLangMap)[langId as 'en' | 'ru'];
 
     return (
         <CWrap sizeId={sizeId} theme={theme.cwrap}>

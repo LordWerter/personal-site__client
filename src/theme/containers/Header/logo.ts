@@ -1,5 +1,5 @@
-import { LOGOS__LOGO_FULL } from '../../images';
-import { TElementTheme } from 'definitions';
+// import { LOGOS__LOGO_FULL } from '../../images';
+import { DomNodeTheme } from 'types';
 
 /*
 import {} from '../../../../images';
@@ -8,12 +8,12 @@ import mixins from '../../mixins';
 import { core as Typography } from '../../typography';
 */
 
-export const blocks: TElementTheme = {
+export const blocks: DomNodeTheme = {
     core: {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: '120px',
-        backgroundImage: `url('${LOGOS__LOGO_FULL}')`,
+        // backgroundImage: `url('${LOGOS__LOGO_FULL}')`,
         width: '136px',
         height: '40px',
         boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.15)',

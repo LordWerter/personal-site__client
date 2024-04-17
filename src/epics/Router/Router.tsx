@@ -1,8 +1,8 @@
-import type { TComponentProps } from 'definitions';
+import type { ComponentProps } from 'types';
 import { Home } from 'epics';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-export type TProps = TComponentProps & {};
+export interface Props extends ComponentProps {}
 
 const router = createBrowserRouter([
     {

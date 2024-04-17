@@ -2,20 +2,18 @@ import { useSelector } from 'react-redux';
 
 import { useTheme } from '@emotion/react';
 
-import { RootState, TComponentProps } from '../../../../definitions';
-import lang from './lang';
+import { RootState, ComponentProps } from 'types';
 import { CWrap, ModalWrap } from './Modal.styles';
 
-export type TProps = TComponentProps & {};
+export interface Props extends ComponentProps {}
 
-export const Modal: React.FC<TProps> = (): JSX.Element => {
+export const Modal: React.FC<Props> = (): JSX.Element => {
     const {
-        App: { sizeId = 'mobile', langId = 'ru' },
+        App: { sizeId = 'MOBILE' },
     } = useSelector((state: RootState) => state);
 
     // @ts-ignore
     const theme = { ...useTheme().Modal };
-    const langs = lang[langId];
 
     return (
         <CWrap sizeId={sizeId} theme={theme.cwrap}>
